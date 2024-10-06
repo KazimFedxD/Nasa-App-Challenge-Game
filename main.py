@@ -1,5 +1,5 @@
 import asyncio
-
+#UNCOMMENT FOR WINDOWS
 #asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy()) # For windows users
 
 import pandas as pd
