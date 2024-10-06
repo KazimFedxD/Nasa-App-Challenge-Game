@@ -1,6 +1,6 @@
 import asyncio
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy()) # For windows users
+#asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy()) # For windows users
 
 import pandas as pd
 import streamlit as st
