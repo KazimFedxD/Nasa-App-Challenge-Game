@@ -1,9 +1,11 @@
+import asyncio
+
+asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy()) # For windows users
 
 import pandas as pd
 import streamlit as st
 
 from get_problems import generate
-import leaderboard
 from process_solutions import evaluate
 from leaderboard import add_to_leaderboard, get_leaderboard
 
@@ -42,6 +44,12 @@ if st.session_state.get("difficulty"):
                 solutionu = st.session_state.solution
                 print(problem, solutionu)
                 score, scenario, timeforscore = evaluate(problem, solutionu)
+                print(score)
+                try:
+                    int(score)
+                except:
+                    score = score[6:]
+                    score = int(score)
                 st.session_state.score = score
                 st.session_state.scenario = scenario
                 st.session_state.timeforscore = timeforscore

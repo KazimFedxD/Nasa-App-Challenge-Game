@@ -1,8 +1,7 @@
-import asyncio
+
 import g4f
 import time
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 def generate(difficulty:int):
     timerstart = time.time()

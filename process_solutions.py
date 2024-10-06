@@ -1,8 +1,7 @@
 import g4f
-import time
-import asyncio
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+import time
+
 
 def evaluate(problem:str, solution:str):
     messages = [
